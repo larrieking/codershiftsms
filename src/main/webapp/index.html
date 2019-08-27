@@ -1,0 +1,946 @@
+<!DOCTYPE html>
+<html lang="en"
+>
+
+      
+    <head>
+        <meta charset="utf-8" />
+        <title>codershift</title>
+        <meta name="description" content="" />
+        <meta name="Author" content="larry yusuf[www.codershift.com]" />
+
+        <!-- mobile settings -->
+        <meta name="viewport" content="width=device-width, maximum-scale=1, initial-scale=1, user-scalable=0" />
+        <!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
+
+        <!-- WEB FONTS : use %7C instead of | (pipe) -->
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600%7CRaleway:300,400,500,600,700%7CLato:300,400,400italic,600,700" rel="stylesheet" type="text/css" />
+
+        <!-- CORE CSS -->
+        <link href="assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+
+        <!-- THEME CSS -->
+        <link href="assets/css/essentials.css" rel="stylesheet" type="text/css" />
+        <link href="assets/css/layout.css" rel="stylesheet" type="text/css" />
+
+        <!-- PAGE LEVEL SCRIPTS -->
+        <link href="assets/css/header-1.css" rel="stylesheet" type="text/css" />
+        <link href="assets/css/color_scheme/brown.css" rel="stylesheet" type="text/css" id="color_scheme" />
+    </head>
+
+    <!--
+            AVAILABLE BODY CLASSES:
+            
+            smoothscroll 			= create a browser smooth scroll
+            enable-animation		= enable WOW animations
+
+            bg-grey					= grey background
+            grain-grey				= grey grain background
+            grain-blue				= blue grain background
+            grain-green				= green grain background
+            grain-blue				= blue grain background
+            grain-orange			= orange grain background
+            grain-yellow			= yellow grain background
+            
+            boxed 					= boxed layout
+            pattern1 ... patern11	= pattern background
+            menu-vertical-hide		= hidden, open on click
+            
+            BACKGROUND IMAGE [together with .boxed class]
+            data-background="assets/images/_smarty/boxed_background/1.jpg"
+    -->
+    <body class="smoothscroll enable-animation">
+
+
+
+
+
+        <!-- wrapper -->
+        <div id="wrapper">
+
+
+
+            <!-- BULLET NAVIGATION -->
+            <div id="nav-bullet">
+                <ul>
+                    <li class="active">
+                        <a href="#wrapper" class="inner-link" data-title="TOP"></a>
+                    </li>
+
+                    <li>
+                        <a href="#multipage" class="inner-link" data-title="OUR PLATFORM"></a>
+                    </li>
+                    <li>
+                        <a href="#multipage-t" class="inner-link" data-title="WHY US"></a>
+                    </li>
+                    <li>
+                        <a href="#newslider" class="inner-link" data-title="CONTACT US"></a>
+                    </li>
+                    <li>
+                        <a href="#footer" class="inner-link" data-title="FOOTER"></a>
+                    </li>
+
+                </ul>
+            </div>
+            <!-- /BULLET NAVIGATION -->
+
+
+
+
+
+            <!-- 
+                    AVAILABLE HEADER CLASSES
+
+                    Default nav height: 96px
+                    .header-md 		= 70px nav height
+                    .header-sm 		= 60px nav height
+
+                    .b-0 		= remove bottom border (only with transparent use)
+                    .transparent	= transparent header
+                    .translucent	= translucent header
+                    .sticky			= sticky header
+                    .static			= static header
+                    .dark			= dark header
+                    .bottom			= header on bottom
+                    
+                    shadow-before-1 = shadow 1 header top
+                    shadow-after-1 	= shadow 1 header bottom
+                    shadow-before-2 = shadow 2 header top
+                    shadow-after-2 	= shadow 2 header bottom
+                    shadow-before-3 = shadow 3 header top
+                    shadow-after-3 	= shadow 3 header bottom
+
+                    .clearfix		= required for mobile menu, do not remove!
+
+                    Example Usage:  class="clearfix sticky header-sm transparent b-0"
+            -->
+            <div id="header" class="navbar-toggleable-md sticky transparent header-md clearfix">
+
+                <!-- TOP NAV -->
+                <header id="topNav" class="">
+                    <div class="container">
+
+                        <!-- Mobile Menu Button -->
+                        <button class="btn btn-mobile" data-toggle="collapse" data-target=".nav-main-collapse">
+                            <i class="fa fa-bars"></i>
+                        </button>
+
+                        <!-- BUTTONS -->
+                        <ul class="float-right nav nav-pills nav-social nav-second-main">
+
+                            <li>
+                                <a href="https://www.facebook.com/codershift" target="_blank" class="social-facebook text-center text-white" data-toggle="tooltip" data-placement="bottom" title="Facebook">
+                                    <i class="icon-facebook"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.twitter.com/codershift" target="_blank" class="social-twitter text-center text-white" data-toggle="tooltip" data-placement="bottom" title="Twitter">
+                                    <i class="icon-twitter"></i>
+                                </a>
+                            </li>
+
+                        </ul>
+                        <!-- /BUTTONS -->
+
+
+                        <!-- Logo -->
+                        <a class="logo float-left" href="index.html">
+                            <h2> <strong class="text-info">codershift</strong></h2>
+                        </a>
+
+                        <!-- 
+                                Top Nav 
+                                
+                                AVAILABLE CLASSES:
+                                submenu-dark = dark sub menu
+
+
+                                + ON SCROLL, CHANGE COLOR TO SUBMENU DROPDOWNS [optional - high detail oriented].
+                                        Useful on transparent header where usualy you use large darker image and on scroll
+                                        you want to switch to light because the rest of your page is light.
+                                        - You can create your custom CSS class for switch - we use in this demo submenu-dark as a default
+                                          and will turn to default white on scroll (if empty, no class will be added)
+                                        NOTE: data-switch-default must be the default class already added to the div.
+
+                                data-switch-default="submenu-dark" 
+                                data-switch-scroll=""
+                        -->
+                        <div class="navbar-collapse collapse float-right nav-main-collapse submenu-dark" data-switch-default="submenu-dark" data-switch-scroll="">
+                            <nav class="nav-main">
+
+                                <!--
+                                        NOTE
+                                        
+                                        For a regular link, remove "dropdown" class from LI tag and "dropdown-toggle" class from the href.
+                                        Direct Link Example: 
+
+                                        <li>
+                                                <a href="#">HOME</a>
+                                        </li>
+
+
+                                        + MENU ANIMATIONS
+                                                .nav-animate-fadeIn
+                                                .nav-animate-fadeInUp
+                                                .nav-animate-bounceIn
+                                                .nav-animate-bounceInUp
+                                                .nav-animate-flipInX
+                                                .nav-animate-flipInY
+                                                .nav-animate-zoomIn
+                                                .nav-animate-slideInUp
+
+                                                .nav-hover-animate = animate text on hover
+                                -->
+                                <ul id="topMain" class="nav nav-pills">
+                                    <li class="dropdown"><!-- HOME -->
+                                        <a class="dropdown-toggle" href="#">
+                                            PRODUCTS
+                                        </a>
+                                        <ul class="dropdown-menu">
+                                            <li class="dropdown">
+                                                <a href="#">
+                                                    VOICE
+                                                </a>
+
+                                            </li>
+                                            <li class="dropdown">
+                                                <a  href="#">
+                                                    SMS
+                                                </a>
+
+                                            </li>
+                                            <li class="dropdown">
+                                                <a  href="#">
+                                                    WHATSAPP
+                                                </a>
+
+                                            </li>
+                                            <li class="dropdown">
+                                                <a  href="#">
+                                                    CONVERSATIONS
+                                                </a>
+
+                                            </li>
+                                            <li class="dropdown">
+                                                <a  href="#">
+                                                    FLOW BUILDER
+                                                </a>
+
+                                            </li>
+                                            <li class="dropdown">
+                                                <a  href="#">
+                                                    EMAIL
+                                                </a>
+
+                                            </li>
+                                            <li class="dropdown">
+                                                <a  href="#">
+                                                    VERIFY
+                                                </a>
+
+                                            </li>
+                                            <li class="dropdown">
+                                                <a  href="#">
+                                                    LOOKUP
+                                                </a>
+
+                                            </li>
+                                            <li class="divider"></li>
+                                            <li class="dropdown">
+                                                <a  href="#">
+                                                    INTEGRATIONS <i class="fa fa-heart ml-10"></i>
+                                                </a>
+
+                                            </li>
+                                            <li class="divider"></li>
+                                            <li><a href="start-revslider.html" data-toggle="tooltip" data-placement="top" title="57 More Revolution Slider V5"><span class="badge badge-danger float-right">new</span> NUMBERS</a></li>
+                                            <li><a href="start-layerslider.html" data-toggle="tooltip" data-placement="top" title="7 More Layer Slider V6"><span class="badge badge-danger float-right">new</span> SIP TRUNKING</a></li>
+                                            <li class="divider"></li>
+
+                                        </ul>
+                                    </li>
+                                    <li class="dropdown"><!-- PAGES -->
+                                        <a class="dropdown-toggle" href="#">
+                                            SOLUTIONS
+                                        </a>
+                                        <ul class="dropdown-menu">
+                                            <li class="dropdown">
+                                                <a  href="#">
+                                                    ENTERPRISE
+                                                </a>
+
+                                            </li>
+                                            <li class="dropdown">
+                                                <a  href="#">
+                                                    MARKETING
+                                                </a>
+
+                                            </li>
+                                            <li class="dropdown">
+                                                <a  href="#">
+                                                    OPERATIONS
+                                                </a>
+
+                                            </li>
+                                            <li class="dropdown">
+                                                <a  href="#">
+                                                    CUSTOMER SERVICES
+                                                </a>
+
+                                            </li>
+
+                                        </ul>
+                                    </li>
+                                    <li class="dropdown"><!-- FEATURES -->
+                                        <a href="#">
+                                            DEVELOPERS
+                                        </a>
+
+                                    </li> 
+                                    <li class="dropdown mega-menu"><!-- PORTFOLIO -->
+                                        <a href="#">
+                                            PRICING
+                                        </a>
+
+                                    </li>
+                                    <li class="dropdown"><!-- BLOG and SHOP -->
+                                        <a  href="#">
+                                            COMPANY
+                                        </a>
+                                        <ul class="dropdown-menu">
+                                            <li class="dropdown">
+                                                <a  href="#">
+                                                    ABOUT
+                                                </a>
+
+                                            </li>
+                                            <li class="dropdown">
+                                                <a  href="#">
+                                                    BLOG
+                                                </a>
+
+                                            </li>
+                                            <li class="dropdown">
+                                                <a  href="#">
+                                                    CAREERS
+                                                </a>
+
+                                            </li>
+                                            <li class="dropdown">
+                                                <a  href="#">
+                                                    SECURITY
+                                                </a>
+
+                                            </li>
+                                            <li class="dropdown">
+                                                <a  href="#">
+                                                    SYSSTEM STATUS
+                                                </a>
+
+                                            </li>
+                                            <li class="dropdown">
+                                                <a  href="#">
+                                                    CONTACT
+                                                </a>
+
+                                            </li>
+
+                                        </ul>
+
+                                    </li>
+
+                                    <li class="dropdown mega-menu"><!-- SHORTCODES -->
+                                        <a  href="#">
+                                            HELP
+                                        </a>
+
+                                    </li>
+
+
+
+                                    <!-- 
+                                            MENU ANIMATIONS
+                                                    .nav-animate-fadeIn
+                                                    .nav-animate-fadeInUp
+                                                    .nav-animate-bounceIn
+                                                    .nav-animate-bounceInUp
+                                                    .nav-animate-flipInX
+                                                    .nav-animate-flipInY
+                                                    .nav-animate-zoomIn
+                                                    .nav-animate-slideInUp
+
+                                                    .nav-hover-animate 		= animate text on hover
+
+                                                    .hover-animate-bounceIn = bounceIn effect on mouse over of main menu
+                                    -->
+                                    <li class="dropdown mega-menu nav-animate-fadeIn nav-hover-animate hover-animate-bounceIn"><!-- THEMATIC -->
+                                        <button onclick="location.href = 'login.xhtml'" class="dropdown-toggle noicon btn-sm btn-light">
+                                            <span class="badge badge-danger float-right fs-11">v2</span>
+                                            <b>LOGIN</b>
+                                        </button>
+
+                                    </li>
+                                    <li class="dropdown mega-menu nav-animate-fadeIn nav-hover-animate hover-animate-bounceIn"><!-- THEMATIC -->
+                                        <button onclick="location.href = 'signup.xhtml'" class="dropdown-toggle noicon btn-sm btn-light">
+
+                                            <b>SIGNUP</b>
+                                        </button>
+
+                                    </li>
+
+                                </ul>
+
+                            </nav>
+                        </div>
+
+                    </div>
+                </header>
+                <!-- /Top Nav -->
+
+            </div>
+
+
+
+
+
+
+            <!-- START -->
+            <section class="b-0 pt-0 pb-0" style="background: linear-gradient(306deg, #36e8a8, #0831c5 85%, #0831c5);">
+
+                <div class="container text-center">
+
+                    <div class="clearfix pt-150 pb-60">
+                        <h1 class="m-0 fs-100 text-white text-uppercase mb-0 hidden-xs-down" data-bgtext="CodershiftSMS" style="font-family:Arial,Helvetica,sans-serif">Codershift</h1>
+                        <h1 class="m-0 fs-60 text-white text-uppercase mb-0 hidden-sm-up" data-bgtext="CodershiftSMS" style="font-family:Arial,Helvetica,sans-serif">Codershift</h1>
+                        <strong><p class="lead fs-30 text-white mb-0">Talk to your customers via</p>
+                            <p class="lead fs-30 text-white mb-0">Voice, SMS and WhatsApp</p></strong>
+                        <h3 class="fs-12 text-white">One API platform for calls, customer service, two-factor authentication and notifications.</h3>
+
+
+                        <a href="signup.xhtml" class="btn btn-3d btn-white"><i class="et-heart"></i>Try it for free</a>
+
+                        <a href="#" class="btn btn-3d btn-amber"><i class="et-chat"></i>Talk to our experts</a>
+                        <h3 class="fs-12 text-white">Get free credits. No credit card required</h3>
+                    </div>
+
+
+
+
+                </div>
+
+
+                <svg width="100%" height="300px" class="d-block" fill="#fbfbfb" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 300" preserveAspectRatio="none">
+                    <path style="opacity:0.15" d="M 1000 299 l 2 -279 c -155 -36 -310 135 -415 164 c -102.64 28.35 -149 -32 -232 -31 c -80 1 -142 53 -229 80 c -65.54 20.34 -101 15 -126 11.61 v 54.39 z"></path>
+                    <path style="opacity:0.3" d="M 1000 286 l 2 -252 c -157 -43 -302 144 -405 178 c -101.11 33.38 -159 -47 -242 -46 c -80 1 -145.09 54.07 -229 87 c -65.21 25.59 -104.07 16.72 -126 10.61 v 22.39 z"></path>
+                    <path style="opacity:1" d="M 1000 300 l 1 -230.29 c -217 -12.71 -300.47 129.15 -404 156.29 c -103 27 -174 -30 -257 -29 c -80 1 -130.09 37.07 -214 70 c -61.23 24 -108 15.61 -126 10.61 v 22.39 z"></path>
+                </svg>
+            </section>
+            <!-- /START -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <!-- CALLOUT -->
+            <div class="alert mt-6 mb-6 b-0 text-xs-center" style="background-color: #fbfbfb;">
+                <div class="container">
+
+                    <div class="row">
+
+                        <div class="col-md-9 col-sm-12"><!-- left text -->
+                            <h3 class="mb-0 fw-200">
+                                <b>Engage Customers</b> like never before on Voice, SMS, Video and WhatsApp.
+
+                                <span class="word-rotator" data-delay="2000">
+                                    <span class="items">
+                                        <span>Easy!</span>
+                                        <span>Fast!</span>
+                                        <span>Smart!</span>
+                                    </span>
+                                </span><!-- /word rotator -->
+                            </h3>
+                            <p class="mb-0 fw-200 fs-15">
+                                Questions? <b><a href="#">talk to an expert.</a></b>
+                            </p>
+                        </div><!-- /left text -->
+
+                        <div class="col-12 mt-15 hidden-md-up"><!-- mobile spacer -->&nbsp;</div>
+
+                        <div class="col-12 col-lg-3 col-md-3 col-sm-12"><!-- right btn -->
+                            <a href="signup.xhtml" class="btn btn-3d btn-blue btn-shadow-1 btn-round btn-lg fs-16 mb-0">
+                                <i class="et-download"></i> 
+                                GET STARTED <b>NOW</b>
+                            </a>
+                        </div><!-- /right btn -->
+
+                    </div>
+
+                </div>
+            </div>
+            <!-- /CALLOUT -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <!-- -->
+            <section id="multipage" class="b-0 section-xs">
+                <div class="container">
+
+                    <div class="heading-title heading-border mb-60  text-center">
+                        <h2><span><span>OUR</span></span> PLATFORM</h2>
+                        <p class="font-lato fs-17">Engage customers on their preferred channels</p>
+                        <p class="font-lato fs-17">using a single platform</p>
+                    </div>
+
+                    <div class="row text-center mb-80 mt-30 wow fadeIn">
+
+                        <div class="col-md-3 col-6">
+                            <div class="text-center">
+                                <i class="ico-light ico-lg ico-rounded ico-hover et-circle-compass"></i>
+                                <h4 class="text-primary">Programmable SMS</h4>
+                                <p>Reach any phone anywhere with our fast and powerful APIs and global carrier.</p>
+
+                                <a href="signup.xhtml">
+                                    Sign
+                                    <!-- /word rotator -->
+                                    <span class="word-rotator" data-delay="2000">
+                                        <span class="items">
+                                            <span>up</span>
+                                            <span>now</span>
+                                        </span>
+                                    </span><!-- /word rotator -->
+                                    <i class="glyphicon glyphicon-menu-right fs-12"></i>
+                                </a>
+
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-6">
+                            <div class="text-center">
+                                <i class="ico-light ico-lg ico-rounded ico-hover et-piechart"></i>
+                                <h4 class="text-primary">Programmable Voice</h4>
+                                <p>Build international phone call capabilities on our fault tolerant VoIP platform.</p>
+
+                                <a href="signup.xhtml">
+                                    Sign
+                                    <!-- /word rotator -->
+                                    <span class="word-rotator" data-delay="2000">
+                                        <span class="items">
+                                            <span>up</span>
+                                            <span>now</span>
+                                        </span>
+                                    </span><!-- /word rotator -->
+                                    <i class="glyphicon glyphicon-menu-right fs-12"></i>
+                                </a>
+
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-6">
+                            <div class="text-center">
+                                <i class="ico-light ico-lg ico-rounded ico-hover et-strategy"></i>
+                                <h4 class="text-primary">Programmable Conversation</h4>
+                                <p>Access the world's most powerful communicatdion channels through a single API.</p>
+
+                                <a href="signup.xhtml">
+                                    Sign
+                                    <!-- /word rotator -->
+                                    <span class="word-rotator" data-delay="2000">
+                                        <span class="items">
+                                            <span>up</span>
+                                            <span>now</span>
+                                        </span>
+                                    </span><!-- /word rotator -->
+                                    <i class="glyphicon glyphicon-menu-right fs-12"></i>
+                                </a>
+
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-6">
+                            <div class="text-center">
+                                <i class="ico-light ico-lg ico-rounded ico-hover et-streetsign"></i>
+                                <h4 class="text-primary">Flow Builder</h4>
+                                <p>Create custom communication flows with a visual editor without writing any code.</p>
+
+                                <a href="signup.xhtml">
+                                    Sign
+                                    <!-- /word rotator -->
+                                    <span class="word-rotator" data-delay="2000">
+                                        <span class="items">
+                                            <span>up</span>
+                                            <span>now</span>
+                                        </span>
+                                    </span><!-- /word rotator -->
+                                    <i class="glyphicon glyphicon-menu-right fs-12"></i>
+                                </a>
+
+                            </div>
+                        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    </div>
+
+                </div>
+            </section>
+
+            <section id="multipage-t">
+                <div class="container">
+                    <div class="heading-title heading-border mb-60  text-center">
+                        <h2><span><span>WHY </span></span> CODERSHIFT</h2>
+                        <p class="font-lato fs-17">Trusted by over 15,000 businesses worldlwide</p>
+
+                    </div>
+
+
+                    <div class="divider divider-center divider-color"><!-- divider -->
+                        <i class="fa fa-chevron-down"></i>
+                    </div>
+
+                    <!-- FEATURED BOXES 3 -->
+                    <div class="row">
+
+                        <div class="col-md-4 col-6">
+                            <div class="text-center">
+                                <i class="ico-color ico-lg ico-rounded ico-hover et-circle-compass"></i>
+                                <h4>Global number coverage</h4>
+                                <p class="font-lato fs-20">Build a local presence with numbers in 150 countries and 700 area codes</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-6">
+                            <div class="text-center">
+                                <i class="ico-color ico-lg ico-rounded ico-hover et-piechart"></i>
+                                <h4>Worlwide delivery</h4>
+                                <p class="font-lato fs-20">Improve your gloobal delivery rates through our local operator connections.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-6">
+                            <div class="text-center">
+                                <i class="ico-color ico-lg ico-rounded ico-hover et-strategy"></i>
+                                <h4>Regulatory Compliance</h4>
+                                <p class="font-lato fs-20">We help you comply with all applicable laws and regulations, including GDPR.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-6">
+                            <div class="text-center">
+                                <i class="ico-color ico-lg ico-rounded ico-hover et-streetsign"></i>
+                                <h4>Security first</h4>
+                                <p class="font-lato fs-20">Receive enterprise-grade security for your products, as default. <a href ="#">Learn more.</a></p>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4 col-6">
+                            <div class="text-center">
+                                <i class="ico-color ico-lg ico-rounded ico-hover et-trophy"></i>
+                                <h4>World Class Support</h4>
+                                <p class="font-lato fs-20">24/7 support for you and your team, with local presence in 7 countries. </p>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-6">
+                            <div class="text-center">
+                                <i class="ico-color ico-lg ico-rounded ico-hover et-tools"></i>
+                                <h4>Fair Pricing Practices</h4>
+                                <p class="font-lato fs-20">The more you send, the less you pay. <a href="#">Contact our sales team</a> for a custom plan.</p>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- /FEATURED BOXES 3 -->
+
+                </div>
+            </section>
+            <!-- / -->
+            <section id="newslider" class="alternate">
+                <div class="container">
+
+                    <div class="row">
+
+                        <!-- FORM -->
+                        <div class="col-md-9">
+                            <h2> We're here to help</h2>
+                            <h3>Find the right Solution <strong><em>and get tailored pricing options.</em></strong></h3>
+
+
+                            <!--
+                                    MESSAGES
+                                    
+                                            How it works?
+                                            The form data is posted to php/contact.php where the fields are verified!
+                                            php.contact.php will redirect back here and will add a hash to the end of the URL:
+                                                    #alert_success 		= email sent
+                                                    #alert_failed		= email not sent - internal server error (404 error or SMTP problem)
+                                                    #alert_mandatory	= email not sent - required fields empty
+                                                    Hashes are handled by assets/js/contact.js
+
+                                            Form data: required to be an array. Example:
+                                                    contact[email][required]  WHERE: [email] = field name, [required] = only if this field is required (PHP will check this)
+                                                    Also, add `required` to input fields if is a mandatory field. 
+                                                    Example: <input required type="email" value="" class="form-control" name="contact[email][required]">
+
+                                            PLEASE NOTE: IF YOU WANT TO ADD OR REMOVE FIELDS (EXCEPT CAPTCHA), JUST EDIT THE HTML CODE, NO NEED TO EDIT php/contact.php or javascript
+                                                                     ALL FIELDS ARE DETECTED DINAMICALY BY THE PHP
+
+                                            WARNING! Do not change the `email` and `name`!
+                                                                    contact[name][required] 	- should stay as it is because PHP is using it for AddReplyTo (phpmailer)
+                                                                    contact[email][required] 	- should stay as it is because PHP is using it for AddReplyTo (phpmailer)
+                            -->
+
+                            <!-- Alert Success -->
+                            <div id="alert_success" class="alert alert-success mb-30">
+                                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                                <strong>Thank You!</strong> Your message successfully sent!
+                            </div><!-- /Alert Success -->
+
+
+                            <!-- Alert Failed -->
+                            <div id="alert_failed" class="alert alert-danger mb-30">
+                                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                                <strong>[SMTP] Error!</strong> Internal server error!
+                            </div><!-- /Alert Failed -->
+
+
+                            <!-- Alert Mandatory -->
+                            <div id="alert_mandatory" class="alert alert-danger mb-30">
+                                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                                <strong>Sorry!</strong> You need to complete all mandatory (*) fields!
+                            </div><!-- /Alert Mandatory -->
+
+
+                            <form action="php/contact.php" method="post" enctype="multipart/form-data">
+                                <fieldset>
+                                    <input type="hidden" name="action" value="contact_send" />
+
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <label for="contact:name">Full Name *</label>
+                                            <input required type="text" value="" class="form-control" name="contact[name][required]" id="contact:name">
+                                        </div>
+                                        <div class="col-md-4">
+                                            <label for="contact:email">E-mail Address *</label>
+                                            <input required type="email" value="" class="form-control" name="contact[email][required]" id="contact:email">
+                                        </div>
+                                        <div class="col-md-4">
+                                            <label for="contact:phone">Phone</label>
+                                            <input type="text" value="" class="form-control" name="contact[phone]" id="contact:phone">
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-8">
+                                            <label for="contact:subject">Subject *</label>
+                                            <input required type="text" value="" class="form-control" name="contact[subject][required]" id="contact:subject">
+                                        </div>
+                                        <div class="col-md-4">
+                                            <label for="contact_department">Department</label>
+                                            <select class="form-control pointer" name="contact[department]">
+                                                <option value="">--- Select ---</option>
+                                                <option value="Marketing">Marketing</option>
+                                                <option value="Webdesign">Webdesign</option>
+                                                <option value="Architecture">Architecture</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="clearfix">
+                                        <label for="contact:message">Message *</label>
+                                        <textarea required maxlength="10000" rows="8" class="form-control" name="contact[message]" id="contact:message"></textarea>
+                                    </div>
+
+
+                                </fieldset>
+
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <button type="submit" class="btn btn-primary"><i class="fa fa-check"></i> SEND MESSAGE</button>
+                                    </div>
+                                </div>
+                            </form>
+
+                        </div>
+                        <!-- /FORM -->
+
+
+                        <!-- INFO -->
+                        <div class="col-md-3">
+
+                            <h2>Visit Us</h2>
+
+
+
+                            <hr />
+
+                            <p>
+                                <span class="block"><strong><i class="fa fa-map-marker"></i> Address:</strong> 4b Jimoh Shobowale, Magodo Phase1, Lagos, Nigeria</span>
+                                <span class="block"><strong><i class="fa fa-phone"></i> Phone:</strong> <a href="tel:+2347064332071">+2347064332071</a></span>
+                                <span class="block"><strong><i class="fa fa-envelope"></i> Email:</strong> <a href="mailto:admin@codershift.com">admin@codershift.com</a></span>
+                            </p>
+
+                            <hr />
+
+                            <h4 class="font300">Business Hours</h4>
+                            <p>
+                                <span class="block"><strong>Monday - Friday:</strong> 8am to 9pm</span>
+                                <span class="block"><strong>Saturday:</strong> 10am to 6pm</span>
+                                <span class="block"><strong>Sunday:</strong> Closed</span>
+                            </p>
+
+                        </div>
+                        <!-- /INFO -->
+
+                    </div>
+
+                </div>
+            </section>
+            <!-- FOOTER -->
+            <footer id="footer">
+
+                <div class="copyright">
+                    <div class="container clearfix">
+
+                        <div class="float-right mt-6">
+
+                            <a href="signup.xhtml" class="float-left btn btn-3d btn-blue btn-shadow-1 btn-round btn-sm mb-0">
+                                <i class="et-download"></i> 
+                                GET STARTED <b>NOW</b>
+                            </a>
+
+                        </div>
+
+                        <div class="float-left pt-6">
+                            <a class="logo float-left" href="index.html">
+                                <h2> <strong class="text-white">codershift</strong></h2>
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+
+            </footer>
+            <!-- /FOOTER -->
+
+
+        </div>
+        <!-- /wrapper -->
+
+
+        <!-- SCROLL TO TOP -->
+        <a href="#" id="toTop"></a>
+
+
+        <!-- PRELOADER -->
+
+
+
+
+
+
+
+
+        <!-- 
+                MODAL ON LOAD 
+                
+                data-autoload="true" 			- load modal on page load
+                data-autoload-delay="2000"		- load after 2000 ms (1000ms = 1s)
+        -->
+
+        <!-- /ODAL ON LOAD -->
+
+
+
+
+        <!-- JAVASCRIPT FILES -->
+        <script>var plugin_path = 'assets/plugins/';</script>
+        <script src="assets/plugins/jquery/jquery-3.3.1.min.js"></script>
+
+        <script src="assets/js/scripts.js"></script>
+<script>
+            _toastr("Welcome, I am a notification", "top-right", "success", false);
+        </script>
+        <script>
+            var totalNewRs5 = jQuery("div.rs5>div").length;
+            jQuery("#rs5count").html(totalNewRs5);
+
+            var totalNewLs6 = jQuery("div.ls6>div").length;
+            jQuery("#ls6count").html(totalNewLs6);
+        </script>
+
+    </body>
+</html>

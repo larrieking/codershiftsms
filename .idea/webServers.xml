@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="4034b02c-21c2-4f7a-ba8d-5879206d8b36" name="glassfish" url="http://localhost">
+        <fileTransfer port="0" mountedRoot="C:\Users\Public\Documents\payara5\payara5" accessType="MOUNT" />
+      </webServer>
+    </option>
+    <groups>
+      <group>
+        <name>aa</name>
+        <servers>
+          <name value="glassfish" />
+        </servers>
+      </group>
+    </groups>
+  </component>
+</project>
