@@ -99,7 +99,7 @@ private  Email mailSession;
     }
     
     
-    public void sendEmail(){
+    public String sendEmail(){
         try{
         List<String>to = new ArrayList<>();
                 to.add("larrie4christ@gmail.com");
@@ -112,6 +112,8 @@ private  Email mailSession;
 
             FacesContext.getCurrentInstance().getExternalContext().getFlash().put("failure", "Internal Error!");
         }
+        setBody("");
+        return null;
    // return "index.xhtml?faces-redirect=true";
     }
 

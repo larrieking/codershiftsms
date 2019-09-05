@@ -1,3 +1,4 @@
+com\codershift\web\QuickSend.class
 com\codershift\service\Email.class
 com\codershift\web\Index.class
 com\codershift\servlet\ServletTest.class

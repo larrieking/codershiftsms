@@ -52,7 +52,7 @@
             data-background="assets/images/_smarty/boxed_background/1.jpg"
     -->
 
-    <body class="grain-blue smoothscroll enable-animation">
+    <body class="smoothscroll enable-animation">
         <!-- SLIDE TOP -->
 
         <!-- /SLIDE TOP -->
@@ -89,7 +89,7 @@
                     Example Usage:  class="clearfix sticky header-sm transparent b-0"
             -->
 
-            <div id="header" class="navbar-toggleable-md sticky transparent header-md clearfix">
+            <div id="header" class="navbar-toggleable-md sticky header-md clearfix">
                 <!-- TOP NAV -->
                 <header id="topNav" class="">
 
@@ -118,7 +118,7 @@
                         <!-- Logo -->
                         <a class="logo float-left" jsf:outcome="index.xhtml">
 
-                            <h2> <strong class="text-info">codershift</strong></h2>
+                           <img src="demo_files/images/logo.png" alt=""/>
                         </a>
                         <!-- 
                                 Top Nav 
@@ -295,7 +295,7 @@
                                     </li> 
 
                                     <li class="dropdown mega-menu"><!-- PORTFOLIO -->
-                                        <a href="#">
+                                        <a jsf:outcome="pricing.xhtml">
                                             PRICING
                                         </a>
 
@@ -377,15 +377,16 @@
                                     -->
 
                                     <li class="dropdown mega-menu nav-animate-fadeIn nav-hover-animate hover-animate-bounceIn"><!-- THEMATIC -->
-                                        <button class="dropdown-toggle noicon btn-sm btn-light">
+                                        <h:form>
+                                        <button class="dropdown-toggle noicon btn-sm btn-light" jsf:action="login.xhtml">
                                             <span class="badge badge-danger float-right fs-11">v2</span>
                                             <b>LOGIN</b>
                                         </button>
-
+                                        </h:form>
                                     </li>
 
                                     <li class="dropdown mega-menu nav-animate-fadeIn nav-hover-animate hover-animate-bounceIn"><!-- THEMATIC -->
-                                        <button class="dropdown-toggle noicon btn-sm btn-light">
+                                        <button class="dropdown-toggle noicon btn-sm btn-light" disabled="true">
 
                                             <b>SIGNUP</b>
                                         </button>

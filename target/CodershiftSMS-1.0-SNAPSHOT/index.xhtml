@@ -6,14 +6,17 @@
       xmlns:h="http://xmlns.jcp.org/jsf/html"
       xmlns:f="http://xmlns.jcp.org/jsf/core"
       xmlns:jsf="http://xmlns.jcp.org/jsf"
-      xmlns:p="http://primefaces.org/ui" >
+>      
     <h:head>
 
         <meta charset="utf-8" />
 
         <title>codershift</title>
+        <link rel = "icon" type = "image/png" href = "demo_files/images/icon.png"/>
+    <!-- For apple devices -->
+    <link rel = "apple-touch-icon" type = "image/png" href = "demo_files/images/icon.png"/>
 
-        <meta name="description" content="" />
+        <meta name="description" content="No. one sms" />
 
         <meta name="Author" content="larry yusuf[www.codershift.com]" />
         <!-- mobile settings -->
@@ -143,7 +146,7 @@
                         <!-- Logo -->
                         <a class="logo float-left" jsf:outcome="index.xhtml">
 
-                            <h2> <strong class="text-info">codershift</strong></h2>
+                        <img src="demo_files/images/logo.png" alt=""/>
                         </a>
                         <!-- 
                                 Top Nav 
@@ -199,9 +202,9 @@
                                         <ul class="dropdown-menu">
 
                                             <li class="dropdown">
-                                                <a href="#">
+                                                <h:link outcome="voice.xhtml">
                                                     VOICE
-                                                </a>
+                                                </h:link>
 
                                             </li>
 
@@ -320,7 +323,7 @@
                                     </li> 
 
                                     <li class="dropdown mega-menu"><!-- PORTFOLIO -->
-                                        <a href="#">
+                                        <a jsf:outcome="pricing.xhtml">
                                             PRICING
                                         </a>
 
@@ -724,7 +727,7 @@
 
                 <div class="container">
 
-
+<input type="hidden" class="btn btn-default toastr-notify" data-progressBar="true" data-timeOut="3000" data-notifyType="primary" data-position="bottom-full-width" data-message="Bottom Full Width Notification"/>
                     <div class="row">
                         <!-- FORM -->
 
@@ -759,16 +762,10 @@
                             -->
                             <!-- Alert Success -->
 
-                            <div id="succ" jsf:rendered="#{not empty flash['success']}"  class="alert alert-success mb-30">
-                                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
-                                <strong>Thank You!</strong> Your message successfully sent!
-                            </div><!-- /Alert Success -->
+                           <!-- /Alert Success -->
                             <!-- Alert Failed -->
 
-                            <div id="fail" jsf:rendered="#{not empty flash['failure']}"  class="alert alert-danger mb-30">
-                                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
-                                <strong>[SMTP] Error!</strong> Internal server error!
-                            </div><!-- /Alert Failed -->
+                            <!-- /Alert Failed -->
                             <!-- Alert Mandatory -->
 
                             <div id="alert_mandatory" class="alert alert-danger mb-30">
@@ -822,8 +819,8 @@
                                 <div class="row">
 
                                     <div class="col-md-12">
-                                        <button jsf:id="but" jsf:action="#{index.sendEmail}" type="submit" class="btn btn-primary"><i class="fa fa-check" /> SEND MESSAGE
-                                            <f:ajax  execute="@form" render=":succ :fail"/>
+                                        <button id="but" jsf:id="but" jsf:action="#{index.sendEmail}" type="submit" class="btn btn-primary"><i class="fa fa-check"  /> SEND MESSAGE
+                                           
                                         </button>
                                     </div>
                                 </div>
@@ -876,7 +873,7 @@
                         <div class="float-left pt-6">
                             <a class="logo float-left" jsf:outcome="index.xhtml">
 
-                                <h2> <strong class="text-white">codershift</strong></h2>
+                                
                             </a>
                         </div>
                     </div>
@@ -904,17 +901,20 @@
         <script src="assets/plugins/jquery/jquery-3.3.1.min.js"></script>
 
         <script src="assets/js/scripts.js"></script>
-        <script>
-            _toastr("Welcome, I am a notification", "top-", "success", false);
-        </script>
+       
         <script>
             var totalNewRs5 = jQuery("div.rs5&gt;div").length;
             jQuery("#rs5count").html(totalNewRs5);
             var totalNewLs6 = jQuery("div.ls6&gt;div").length;
             jQuery("#ls6count").html(totalNewLs6);
         </script>
+        <h:outputScript rendered="#{not empty flash['success']}">
+			_toastr("Thank you!!! we will contact you shortly.","top-right","success",false);
+        </h:outputScript>
   
-
+<h:outputScript rendered="#{not empty flash['failure']}">
+			_toastr("Error! Please try again","top-right","error",false);
+        </h:outputScript>
 
 
     </h:body></html>

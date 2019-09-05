@@ -14,7 +14,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MavenImportPreferences">
     <option name="importingSettings">
@@ -410,6 +410,7 @@
       <workItem from="1566694467170" duration="2120000" />
       <workItem from="1566689740210" duration="3541000" />
       <workItem from="1566815434791" duration="1088000" />
+      <workItem from="1567026849452" duration="1145000" />
     </task>
     <servers />
   </component>

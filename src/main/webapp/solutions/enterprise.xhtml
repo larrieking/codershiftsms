@@ -1,0 +1,52 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+
+    <body>
+
+        <ui:composition template="./../newTemplate.xhtml">
+
+            <ui:define name="content">
+                   <section id="slider" class="fullheight" style="background: url(&quot;demo_files/images/1200x800/18-min.jpg&quot;);">
+				
+<div class="overlay dark-5"><!-- dark overlay [0 to 9 opacity] --></div>
+				
+<div class="display-table">
+					
+<div class="display-table-cell vertical-align-middle">
+						
+<div class="container text-center">
+							
+<h1 class="mb-20 fs-40 mt-80">THIS PAGE IS UNDER CONSTRUCTION</h1>
+							
+<p class="fs-20 font-lato text-muted">Please, check back again , we are working hard.</p>
+							
+<div style="max-width: 550px; margin: auto;">
+								
+<div class="countdown squared dark theme-style" data-labels="years,months,weeks,days,hour,min,sec" data-from="December 31, 2018 15:03:26"><!-- Example Date From: December 31, 2018 15:03:26 --></div>
+							</div>
+							
+<div style="max-width: 500px; margin: auto;">
+								<form class="validate m-0" action="php/newsletter.php" method="post" data-success="Subscribed! Thank you!" data-toastr-position="top-right">
+									
+<div class="input-group">
+										<span class="input-group-addon"><i class="fa fa-envelope" /></span>
+										<input type="email" id="email" name="email" class="form-control required" placeholder="Enter your Email" />
+										<span class="input-group-btn">
+											<button class="btn btn-success" type="submit">Subscribe</button>
+										</span>
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>
+				
+	
+			</div></section>
+            </ui:define>
+
+        </ui:composition>
+
+    </body>
+</html>
