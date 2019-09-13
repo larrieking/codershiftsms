@@ -5,7 +5,9 @@
  */
 package com.codershift.web;
 
-import com.mycompany.messagebirdjava.SendMessage;
+import com.codershift.util.SendMessage;
+import java.util.Map;
+//import com.mycompany.messagebirdjava.SendMessage;
 import javax.inject.Named;
 import javax.enterprise.context.RequestScoped;
 import javax.faces.context.FacesContext;
@@ -19,6 +21,8 @@ import javax.faces.context.FacesContext;
 public class QuickSend {
 
     private String originator, recipient, body;
+    private boolean error = false;
+    private boolean success = false;
 
     /**
      * Creates a new instance of QuickSend
@@ -69,14 +73,50 @@ public class QuickSend {
     }
 
     public void sendMessage() {
+        Map<String, String> params = FacesContext.getCurrentInstance().getExternalContext().getRequestParameterMap();
+
+        setRecipient(params.get("recipient"));
+        setOriginator(params.get("originator"));
+        setBody(params.get("body"));
         SendMessage bird = new SendMessage();
         String msg = bird.send(recipient, originator, body);
+
         if (msg.contains("fail:")) {
-            FacesContext.getCurrentInstance().getExternalContext().getFlash().put("failed", msg);
+            setError(true);
+            //FacesContext.getCurrentInstance().addMessage(null, new FacesMessage(FacesMessage.SEVERITY_ERROR, "An error occured"));//getExternalContext().getFlash().put("failed", msg);
         } else {
-            FacesContext.getCurrentInstance().getExternalContext().getFlash().put("success", msg);
+            //FacesContext.getCurrentInstance().addMessage(null, new FacesMessage(FacesMessage.SEVERITY_INFO, "Success"));
+            setSuccess(true);
         }
 
+    }
+
+    /**
+     * @return the error
+     */
+    public boolean isError() {
+        return error;
+    }
+
+    /**
+     * @param error the error to set
+     */
+    public void setError(boolean error) {
+        this.error = error;
+    }
+
+    /**
+     * @return the success
+     */
+    public boolean isSuccess() {
+        return success;
+    }
+
+    /**
+     * @param success the success to set
+     */
+    public void setSuccess(boolean success) {
+        this.success = success;
     }
 
 }

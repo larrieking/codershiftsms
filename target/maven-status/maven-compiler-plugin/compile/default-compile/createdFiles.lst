@@ -1,4 +1,16 @@
+com\codershift\web\UserController.class
 com\codershift\web\QuickSend.class
-com\codershift\service\Email.class
+com\codershift\entity\Role.class
+com\codershift\entity\Account.class
+com\codershift\service\AccountFacade.class
+com\codershift\service\RoleFacade.class
+com\codershift\entity\Role_.class
+com\codershift\web\FeedbackBean.class
+com\codershift\util\SendMessage.class
 com\codershift\web\Index.class
+com\codershift\util\GenerateSHA56.class
+com\codershift\service\AbstractFacade.class
+com\codershift\entity\Account_.class
+com\codershift\web\Message.class
+com\codershift\service\Email.class
 com\codershift\servlet\ServletTest.class

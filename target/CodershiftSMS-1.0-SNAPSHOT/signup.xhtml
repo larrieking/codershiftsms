@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml"
-   
+
       xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
       xmlns:h="http://xmlns.jcp.org/jsf/html"
       xmlns:f="http://xmlns.jcp.org/jsf/core"
@@ -12,9 +12,14 @@
 
         <title>Codershift</title>
 
-        <meta name="description" content="" />
+        <title>codershift</title>
+        <link rel = "icon" type = "image/png" href = "demo_files/images/icon.png"/>
+        <!-- For apple devices -->
+        <link rel = "apple-touch-icon" type = "image/png" href = "demo_files/images/icon.png"/>
 
-        <meta name="Author" content="Larry Yusuf [www.codershift.com]" />
+        <meta name="description" content="Reach 10 billion phones in minutes via SMS, Voice  and Chat" />
+
+        <meta name="Author" content="larry yusuf[www.codershift.com]" />
         <!-- mobile settings -->
 
         <meta name="viewport" content="width=device-width, maximum-scale=1, initial-scale=1, user-scalable=0" />
@@ -118,7 +123,7 @@
                         <!-- Logo -->
                         <a class="logo float-left" jsf:outcome="index.xhtml">
 
-                           <img src="demo_files/images/logo.png" alt=""/>
+                            <img src="demo_files/images/logo.png" alt=""/>
                         </a>
                         <!-- 
                                 Top Nav 
@@ -378,10 +383,10 @@
 
                                     <li class="dropdown mega-menu nav-animate-fadeIn nav-hover-animate hover-animate-bounceIn"><!-- THEMATIC -->
                                         <h:form>
-                                        <button class="dropdown-toggle noicon btn-sm btn-light" jsf:action="login.xhtml">
-                                            <span class="badge badge-danger float-right fs-11">v2</span>
-                                            <b>LOGIN</b>
-                                        </button>
+                                            <button class="dropdown-toggle noicon btn-sm btn-light" jsf:action="login.xhtml">
+                                                <span class="badge badge-danger float-right fs-11">v2</span>
+                                                <b>LOGIN</b>
+                                            </button>
                                         </h:form>
                                     </li>
 
@@ -434,67 +439,61 @@
 
                             <div class="box-static box-border-top p-30">
 
-                                
-                                <form class="m-0 sky-form boxed" action="#" method="post">
+
+                                <h:form class="m-0 sky-form boxed">
                                     <header>
                                         <i class="fa fa-users" /> Register
                                     </header>
                                     <fieldset class="m-0">					
                                         <label class="input mb-10">
                                             <i class="ico-append fa fa-envelope" />
-                                            <input type="text" placeholder="Email address" />
+                                            <input type="text" placeholder="Email address" jsf:value="#{userController.account.email}" />
                                             <b class="tooltip tooltip-bottom-right">Needed to verify your account</b>
                                         </label>
 
                                         <label class="input mb-10">
                                             <i class="ico-append fa fa-lock" />
-                                            <input type="password" placeholder="Password" />
+                                            <input type="password" placeholder="Password" jsf:value="#{userController.account.password}" />
                                             <b class="tooltip tooltip-bottom-right">Only latin characters and numbers</b>
                                         </label>
 
                                         <label class="input mb-10">
                                             <i class="ico-append fa fa-lock" />
-                                            <input type="password" placeholder="Confirm password" />
+                                            <input type="tel" placeholder="Phone Number" jsf:value="#{userController.account.phoneNumber}" />
                                             <b class="tooltip tooltip-bottom-right">Only latin characters and numbers</b>
                                         </label>
+                                        
+                                        <label class="input mb-10">
+                                            <i class="ico-append fa fa-lock" />
+                                            <input type="text" placeholder="Company Name" jsf:value="#{userController.account.companyName}" />
+                                            <b class="tooltip tooltip-bottom-right">Only latin characters and numbers</b>
+                                        </label>
+                                        
 
-                                        <div class="row mb-10">
-
-                                            <div class="col-md-6">
-                                                <label class="input">
-                                                    <input type="text" placeholder="First name" />
-                                                </label>
-                                            </div>
-
-                                            <div class="col col-md-6">
-                                                <label class="input">
-                                                    <input type="text" placeholder="Last name" />
-                                                </label>
-                                            </div>
-                                        </div>
                                         
 
 
+
                                         <div class="mt-30">
-                                            <label class="checkbox m-0"><input class="checked-agree" type="checkbox" name="checkbox" /><i />I agree to the <a href="#" data-toggle="modal" data-target="#termsModal">Terms of Service</a></label>
-                                            <label class="checkbox m-0"><input type="checkbox" name="checkbox" /><i />I want to receive news and  special offers</label>
+                                            <label class="checkbox m-0"><input class="checked-agree" type="checkbox" name="checkbox" required="required"/><i />I agree to the <a href="#" data-toggle="modal" data-target="#termsModal">Terms of Service</a></label>
+                                           
                                         </div>
                                     </fieldset>
 
                                     <div class="row mb-20">
 
                                         <div class="col-md-12">
-                                            <button type="submit" class="btn btn-primary"><i class="fa fa-check" /> REGISTER</button>
+                                            <button type="submit" class="btn btn-primary" jsf:action="#{userController.create_user()}"><i class="fa fa-check" /> REGISTER</button>
                                         </div>
-                                         
+
                                     </div>
                                     <div class="mt-30 text-center">
-                                <a jsf:outcome="login.xhtml"><strong>Already have an account?</strong></a>
-                            </div>
-                                </form>
+                                        <a jsf:outcome="login.xhtml"><strong>Already have an account?</strong></a>
+                                    </div>
+                                </h:form>
                             </div>
 
-                           
+
                         </div>
                     </div>
                 </div>
@@ -537,6 +536,6 @@
         <script src="assets/js/scripts.js"></script>
         <!-- STYLESWITCHER - REMOVE -->
 
-        <script async="" src="demo_files/styleswitcher/styleswitcher.js"></script>
+       
 
     </body></html>

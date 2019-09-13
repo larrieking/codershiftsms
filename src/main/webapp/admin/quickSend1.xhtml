@@ -1,0 +1,65 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+    <h:head>
+        <title>JSF 2.3 - CommandScript</title> 
+       <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous"/>
+
+        <!-- Optional theme -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap-theme.min.css" integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ" crossorigin="anonymous"/>
+
+        <!-- Latest compiled and minified JavaScript -->
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.2/jquery-confirm.min.css"/>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.2/jquery-confirm.min.js"></script>
+    </h:head>
+    <h:body>           
+        <h5>Your Feedback About JSF 2.3: </h5>
+        <hr/>
+
+        <div>            
+            Your Name: <input id="userId" type="text"/>
+            <p id="feedbackId" contenteditable="true">type your feedback here</p>
+        </div>
+        <br/>
+        <button class="btn btn-sm btn-primary" onclick="sendFeedbackWrapper();">Send Feedback</button>
+        <hr/>
+        <h:dataTable id="savedId" var="item" value="#{feedbackBean.lastSave}">
+            <h:column>
+                <h:outputText id="te"  value="Last feedback was saved at: #{item.test}" /><br />
+            </h:column>
+
+        </h:dataTable>
+        <h:form>
+            <h:commandScript name="sendFeedback" execute="@form" action="#{feedbackBean.send()}" render=":savedId"/>                
+        </h:form>
+
+        <h:outputScript>
+            function sendFeedbackWrapper(){
+            $.confirm({
+            theme: 'dark',
+            title: 'Confirmation!',
+            content: 'Are you sure you want to send this message?!',
+            buttons: {
+            confirm: function () {
+            sendFeedback({ user: document.getElementById("userId").value, feedback: document.getElementById("feedbackId").innerHTML }); 
+            $.alert("Message Sent!");
+
+            },
+            cancel: function () {
+
+            },
+
+            }
+            
+            });
+           
+
+            }
+        </h:outputScript>
+    </h:body>
+</html>
+
